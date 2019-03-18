@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/macro/add" method="post" th:object="${macroForm}">
+        Waga w gramach: <input type="number" th:field="*{weight}"/> <br/>
+        Typ (CARBO/PROTEINE/FAT): <input type="text" pattern="(CARBO)|(PROTEINE)|(FAT)" th:field="*{macroType}"/> <br/>
+        Data: <input type="date" th:field="*{eatDate}"/> <br/>
+        <input type="submit" value="Wyślij">
+    </form>
+</body>
+</html>
